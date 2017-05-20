@@ -1,0 +1,38 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "description": "Performance benchmark comparing Celeri to other popular server frameworks",
+  "main": "index.js",
+  "scripts": {
+    "start:baseline:hello": "node ./servers/baseline/hello.js",
+    "start:celeri:hello": "node ./servers/celeri/hello.js",
+    "start:celeri:large": "node ./servers/celeri/large.js",
+    "start:hapi:hello": "node ./servers/hapi/hello.js",
+    "start:express:hello": "node ./servers/express/hello.js",
+    "start:express:large": "node ./servers/express/large.js",
+    "test:hello": "artillery run ./tests/hello.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celeri-server/benchmark.git"
+  },
+  "keywords": [
+    "celeri",
+    "benchmark",
+    "performance",
+    "load",
+    "test"
+  ],
+  "author": "James Brumond <james@jbrumond.me> (http://www.jbrumond.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celeri-server/benchmark/issues"
+  },
+  "homepage": "https://github.com/celeri-server/benchmark#readme",
+  "dependencies": {
+    "@celeri/http-server": "^1.1.3",
+    "artillery": "^1.6.0-0",
+    "express": "^4.15.2",
+    "hapi": "^16.1.1"
+  }
+}
